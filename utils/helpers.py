@@ -5,9 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_groq_api_key():
-    # GROQ_API_KEY = "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"
     return os.getenv("GROQ_API_KEY")  # Or hardcode if testing
-    # return GROQ_API_KEY
+
 
 def query_groq(prompt, model="llama3-8b-8192"):
     url = "https://api.groq.com/openai/v1/chat/completions"
